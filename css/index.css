@@ -1,0 +1,353 @@
+html {
+  scroll-behavior: smooth;
+}
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Roboto, Arial, Verdana, san-serif;
+}
+
+:root {
+  --bg-color: rgb(23, 28, 34);
+  --30-bg-color: rgb(32, 34, 47);
+  --dft-color: white;
+  --spe-color: #01C38D;
+}
+
+body {
+  background: var(--bg-color);
+  color: white;
+}
+
+a {
+  color: var(--dft-color);
+  text-decoration: none;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-color);
+}
+#h-basics {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+#nav {
+  display: none;
+}
+#nav.active {
+  display: block;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 100%;
+  background: var(--bg-color);
+}
+#logo {
+  width: 40%;
+}
+.nav-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  list-style: none;
+}
+.nav-items {
+  display: inline-block;
+  width: 100px;
+  text-align: center;
+  margin: 5px auto;
+}
+.nav-links.active {
+  color: var(--spe-color);
+}
+#bars-icon {
+  font-size: 20px;
+}
+
+/* ------------ main section style ------------ */
+.spe-text {
+  color: var(--spe-color);
+}
+.spe-head {
+  color: var(--spe-color);
+  font-size: 20px;
+}
+.spe-head::after {
+  content: "";
+  display:block;
+  width: 70px;
+  height: 2px;
+  background: var(--spe-color);
+}
+.ord-head {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+#banner {
+  display: flex;
+  flex-direction: column-reverse;
+  padding: 40px 0 0 0;
+  background: var(--30-bg-color);
+  margin-bottom: 30px;
+}
+#b-desc{
+  padding: 10px;
+}
+#me {
+  font-size: 35px;
+}
+#contact-wraper {
+    border: 3px solid var(--spe-color);
+    border-radius: 50px;
+    width: 120px;
+    padding: 8px;
+    text-align: center;
+    margin: 15px 0;
+    font-size: 20px;
+  }
+#freelance {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+#freelance p {
+  font-weight: bolder;
+}
+.brands {
+  width: 40px;
+  border-radius: 50%;
+}
+#img-wraper {
+  text-align: center;
+}
+#b-img {
+  width: 60%;
+  display: inline-block;
+  z-index: 10;
+}
+.b-i-background {
+  position: absolute;
+  width: 350px;
+  right: 0;
+  top: 0;
+  z-index: -2;
+}
+
+/* ------------ services section style ------------ */
+#services {
+  margin: 50px 10px;
+}
+#s-i-wraper {
+   display: flex;
+   flex-direction: column;
+}
+.s-items {
+  width: 80%;
+  margin: 10px auto;
+  text-align: center;
+  padding: 20px;
+  background: var(--30-bg-color)
+}
+.s-items i {
+  font-size: 40px;
+  color: var(--spe-color);
+  margin-bottom: 15px;
+}
+
+/* ------------ portfolio section style ------------ */
+#portfolio {
+  margin: 50px 10px;
+}
+#p-i-wraper {
+  display: flex;
+  flex-direction: column;
+}
+.p-items {
+  margin: 10px 20px;
+}
+.p-i-img {
+  width: 100%;
+  border-radius: 15px;
+}
+#see-more {
+  margin: 10px;
+  text-align: center;
+}
+#see-more a {
+  color: var(--spe-color);
+  font-weight: bolder;
+  font-size: 20px;
+  text-decoration: underline;
+}
+
+/* ------------ contact section style -------- */
+#contact {
+  margin: 50px 10px;
+}
+#c-i-wraper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.c-infos {
+  width: 90%;
+  height: 50px;
+  background: var(--30-bg-color);
+  margin: 10px 0;
+  padding: 15px;
+  border-radius: 10px;
+}
+.c-icons {
+  color: var(--spe-color);
+  font-size: 20px;
+  display: inline-block;
+  margin: 0 10px;
+}
+.contact-img {
+  display: none;
+}
+
+/* ------------ responsive design of tablet ---------- */
+@media only screen and (min-width: 768px) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+ #bars-icon {
+    display: none;
+  }
+  #nav {
+    display: block;
+    text-align: left;
+  } 
+  #nav.active {
+    position: relative;
+    top: 0;
+  }
+  .nav-list {
+    flex-direction: row;
+    justify-content: left;
+    width: 280px;
+  }
+  /* ------ banner section style ------- */
+  #banner {
+    flex-direction: row;
+    align-items: center;
+  }
+  #b-desc {
+    flex-basis: 50%;
+    padding: 10px;
+  }
+  #b-desc h4 {
+    font-size: 25px;
+  }
+  #me {
+    font-size: 35px;
+  }
+  #img-wraper {
+    flex-basis: 50%;
+    
+  }
+  #b-img {
+    display: inline-block;
+    margin: 0 0 0 70px;
+  }
+  #contact-wraper {
+    border: 3px solid var(--spe-color);
+    border-radius: 50px;
+    width: 120px;
+    padding: 8px;
+    text-align: center;
+    margin: 15px 0;
+  }
+  /* -------- services section style ----------- */
+  #s-i-wraper {
+    flex-direction: row;
+    gap: 20px;
+  }
+  /* ----------- portfolio section style ---------- */
+  #p-i-wraper {
+    flex-direction: row;
+    align-items: center;
+  }
+  .p-items {
+    flex-basis: 32%;
+  }
+  /* ------------ contact section style ------------ */
+  #contact-f {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  #c-i-wraper {
+    flex-basis: 50%;
+  }
+  #c-img-wraper {
+    flex-basis: 40%;
+    text-align: center;
+  }
+  .contact-img {
+    display: inline-block;
+    width: 80%;
+    border-radius: 15px;
+  }
+}
+
+/* ------------ responsive design of lap top ---------- */
+@media only screen and (min-width: 980px) {
+  header {
+    justify-content: space-between;
+    height: 70px;
+  }
+  #logo {
+    width: 250px; 
+  }
+  #banner {
+    justify-content: center;
+  }
+  #b-desc {
+    font-size: 25px;
+     padding: 0 0 0 50px;
+  }
+  #b-desc h4 {
+    font-size: 35px;
+  }
+  #me {
+    font-size: 50px;
+  }
+  #contact-wraper {
+    width: 150px;
+    padding: 5px;
+  }
+  #b-img {
+    width: 310px;
+   
+  }
+  /* ---------- services section style ----------*/
+  #services {
+    padding: 30px;
+  }
+  #s-i-wraper {
+    justify-content: center;
+    gap: 30px;
+  }
+  /* ----------- portfolio section style ---------- */
+  #portfolio {
+    padding: 30px;
+  }
+  #p-i-wraper {
+    justify-content: center;
+  }
+  /* ------------ contact section style ------------ */
+  #contact {
+    font-size: 20px;
+  }
+  .c-icons {
+    font-size: 25px;
+  }
+}
