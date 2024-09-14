@@ -9,3 +9,10 @@ function toggleActive(stimulusNode, targetNode) {
 bar.addEventListener("click", () => {
     toggleActive(bar, nav);
 });
+
+const navLinks = document.getElementsByClassName("nav-links");
+for (let navLink of navLinks) {
+    navLink.addEventListener("click", e => {
+        toggleActive(bar, nav);
+    }, false);
+}
